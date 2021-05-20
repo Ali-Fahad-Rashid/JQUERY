@@ -1,0 +1,235 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>JQuery</title>
+<style>
+    p{font-size: 100px; color: aqua; border: dotted red; border-radius: 10%;}
+    div{font-size: 100px; color: rgb(43, 255, 0);  border: dotted red; border-radius: 10%;}
+    button{font-size: 100px; background-color: orchid;  border: dashed red; border-radius: 10%;}
+    input{font-size: 100px; background-color: orchid;  border: dotted red; border-radius: 10%;}
+    h3{font-size: 100px; color: rgb(208, 255, 0);  border: dotted red; border-radius: 10%;}
+    h5{font-size: 100px; color: rgb(76, 0, 255);  border: dotted red; border-radius: 10%;}
+
+</style>
+</head>  
+<body>  
+
+<button id="a" class="b">Start</button>  
+<input id="h" class="o" type="text" value="">
+<p id="e" class="f">example 1</p>  
+<div id="c" class="d">example 2</div>  
+<h3 id="g" class="l">example 3</h3>  
+<h5 id="m" class="n">example 4</h5>  
+
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
+
+<p id="ee" class="ff">example 5</p>  
+
+    
+<script>   
+
+$(document).ready(function(){  
+   // $("p").hide(500);  
+  // $("p").show(500);  
+  // $("p").toggle(500);    
+  //$("p").fadeOut(1200);  
+  //$("p").fadeIn(1200);  
+  //$("p").fadeTo("slow", 0.1);  //opacity
+  //$("#e").delay(500).fadeOut();    
+ // $("p").slideDown(1000);  // تعمل مع الاشياء المخفيه
+  // $("p").slideUp(2000);  
+    $("button").click(function(){  
+      //  $("p").toggle(500);    
+     // $("p").fadeToggle("slow");  
+   //  $("p").slideToggle("slow");  
+
+     //$("div").scrollTop(565);  //اضافه قيمه ابتدائيه
+  //var x = $("div").scrollTop();  //سحب قيمه 
+   //alert(x);
+   //$("div").scrollTop(55); 
+    // $("div").scrollLeft(100); //افقي 
+    
+    });  
+
+   // $("p").html("<h1>Ali</h1>");  //اضافيه قيمه وتحذف القيمه السابقه
+     // var x = $("p").html();  //سحب قيمه html
+     // alert(x);
+    // $("p").text("Ali");  //اضافيه قيمه كتابيه وتحذف القيمه السابقه
+
+ //var x = $("p").text();  //سحب قيمه
+  //    alert(x);
+
+    // $("input:text").val("Ali");  //اضافه قيمه للادخال
+ // var x = $("input:text").val();  //سحب قيمه من الادخال وكذلك تتعامل مع الاختيارات option
+  //    alert(x);
+
+ // $("p").css("background-color", "red");  //اضافه
+  //$("p").css({"background-color": "yellow", "font-size": "200%"});  //اضافه متعدد
+ // var x = $("p").css("font-size");  //سحب
+   //   alert(x);
+
+  //  $("p").before("<h1>Ali</h1>");  //عرض بيانات قبل العنصر المحدد بالموقع
+ //  $("p").after("<h6>Ali</h6>");   //عرض بيانات بعد العنصر المحدد بالموقع
+ // $("<h1>Ali</h1>").insertAfter("p");  //نفس الي فوقها بس قلب المواقع
+
+ // $("#e").prepend("<h6>Ali</h6>");  //اضافه في البدايه للعنصر المحدد
+ // $("#e").append("<h1>Ali</h1>");  //اضافه في النهايه للعنصر المحدد
+  //$("<span><b>Hello Ali</b></span>").appendTo("#e");  //نفس الي فوقها
+
+
+  //$("#e").clone().appendTo("div");  //نسخ
+  //$("p").remove();  //حذف
+  //$("p").empty();  //تصفير
+ //var x = $("#e").detach();  //حذف مع حفظ نسخه
+  //$("div").html(x);
+
+
+  //$("div").attr("style", "color:red");  //وضع قيمه
+    //var x = $("div").attr("style");  //سحب قيمه
+  //alert(x);
+
+ // $("#h").attr({
+  //  style: "color:blue",
+   // value: "Ali",
+  //});   //متعدد
+
+       // $("div").prop("style","color:red");  //اضافه
+       // alert($("div").prop("style"));  //سحب قيمه 
+
+     // $("div").data("name", "Welcome");  //اضافه
+    //  alert($("div").data("name"));  //سحب قيمه 
+
+
+      //  $("p").addClass("intro");  
+      //  $("p").text( $("p").hasClass("intro") );  //تبحث هل الكلاس موجود ام لا وترجع true or false
+      //  $("p").toggleClass("main");  //يضيف ويلغي الكلاس
+
+      //var x = $("p").position(); alert(x.top +"-"+ x.left);  //سحب وعرض الموقع بالبكسل
+     // var x = $("p").offset(); alert(x.top +"-"+ x.left);  //سحب وعرض الازاحه بالبكسل
+
+       // var x = $("p").width();  // سحب قيمه العرض
+       // alert(x);
+       // $("p").width(10); //اضافه عرض 
+       /// var x =  $("p").height();  //سحب الطول
+       // $("p").height(10);  //اضافه طول
+
+      //  var x = $("div").innerWidth();  //includes padding but not border and margin.
+           //     alert(x);
+
+      //  $("div").innerWidth(10);
+
+      //  var x = $("div").innerHeight() //includes padding but not border and margin.
+      //  $("div").innerHeight(10);
+     
+      //  $("div").outerWidth(10); 
+      //  $("div").outerWidth();  //includes border and padding both.
+      //  var width = $("div").outerWidth(true);  //True:It specifies that include the margin.
+
+      //  $("div").outerHeight());  //includes border and padding both.
+      //  $("div").outerHeight(10);  
+
+
+   // $("p").wrap("<div></div>");  //عنصر بداخل عنصر من نوع 
+    //var x = $("p").html();
+    // alert(x);
+   // $("p").unwrap();  //تحذف العنصر الاساسي واحد بعد واحد
+
+   // $("p").wrapInner("<em><b></b></em>");  // عنصر بداخل عنصر من نوع 
+   // var x = $("p").html();
+   //  alert(x);
+   // $("p").wrapAll("<div></div>");  //تخلي كل العناصر بداخل عنصر واحد
+
+   // var x = $("form").serializeArray();  // تستخدم للتعامل مع  api  والروابط
+    //var x = $("form").serialize();  
+
+   // $("p").each(function(){ });   //تنفذ العمليه لكل عنصر
+
+    //$("p").replaceWith("<h1> Hello world </h1>");  //استبدال عنصر كامل
+
+   // setInterval(function () {
+
+      //  alert("Hiiiiiiii")
+
+   // }, 1000);  //تايمر
+
+   // setTimeout(function () {
+  //alert("Hiiiiiiii")
+ //  }, 1000);  //تايمر
+
+ //$("input[type=text]").focus();  // تجعل العنصر معطل غير قابل للكتابه
+ //$("input[type=text]").blur();  // تجعل العنصر معطل غير قابل للكتابه
+
+                                  /*    التعامل مع الاخداث event     */
+
+
+//$("p").select(function() {  //حدث عند الفوكس 
+//$("p").html("<h1>Ali</h1>");
+
+//});  
+
+//$("p").hover(function(){  
+    //    $("p").css("background-color", "violet");  
+     //   }, function(){$("p").css("background-color", "green");});  
+
+
+
+
+/*   $("p").bind("click", function() {  
+    $("p").text("This is a single click!");  
+  });  
+  $("p").bind( "dblclick", function() {  
+    $("p").text("This is a double click on");  
+  });  
+  $("p").bind("mouseenter mouseleave", function(){  
+    $("p").text("This is mouseenter mouseleave");  
+  });   
+
+ $("p").unbind("click");   */
+
+
+    $("p").animate({  
+            backgroundColor: "blue",  
+            color: "red",  
+           width: 440 , 
+           height: 444,
+         }, 1000 );  
+
+
+
+
+
+
+
+});  
+</script>   
+
+</body>  
+</html>  
+
+<!-- 
+click
+focus
+blur
+select
+change
+submit
+keypress
+mousedown
+mouseup
+mouseleave
+mouseenter
+mouseout
+mouseover
+hover
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>  
+
+ -->
